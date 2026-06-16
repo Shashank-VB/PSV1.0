@@ -15,6 +15,7 @@ aadt_value = st.sidebar.number_input("enter AADT value:", min_value=0)
 per_hgvs = st.sidebar.number_input("enter % of HGVs:")
 year = st.sidebar.number_input("enter Year", min_value=0)
 lanes = st.sidebar.number_input("enter number of Lanes", min_value=1)
+Design period = st.sidebar.number_input("enter Design period", min_value=1)
 pcvl = 0
 lane1 = 0
 lane2 = 0
@@ -32,7 +33,7 @@ if year == 0 :
 	design_period=0
 	
 elif year != 0 :
-	design_period = ((20 + 2025) - year)
+	design_period = ((Design period + 2025) - year)
 	
 
 # Calculation
