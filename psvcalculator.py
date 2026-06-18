@@ -12,7 +12,7 @@ st.title("Polished Stone Value (PSV) Calculator Results")
 st.sidebar.title ("Polished Stone Value (PSV) Calculator")
 st.sidebar.header ("Enter values:")
 aadt_value = st.sidebar.number_input("enter AADT value:", min_value=0)
-per_hgvs = st.sidebar.number_input("enter %age of HGVs:")
+per_hgvs = st.sidebar.number_input("enter % of HGVs:")
 year = st.sidebar.number_input("enter Loop Year", min_value=0)
 lanes = st.sidebar.number_input("enter number of Lanes", min_value=1)
 Design_life = st.sidebar.number_input("enter Design life", min_value=1)
@@ -37,13 +37,7 @@ elif year != 0 :
 	
 
 # Calculation
-if per_hgvs >= 11 :
-	result1 = per_hgvs
-	AADT_HGVS = (result1*(aadt_value/100))
-
-else:
-        result2 = 11
-        AADT_HGVS = ((result2*aadt_value)/100)
+Result = ((per_hgvs * aadt_value) / 100)
 
 
 total_projected_aadt_hgvs = (AADT_HGVS * (1+1.54/100) ** design_period)
