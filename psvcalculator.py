@@ -39,7 +39,6 @@ elif year != 0 :
 # Calculation
 Result = ((per_hgvs * aadt_value) / 100)
 
-
 total_projected_aadt_hgvs = (AADT_HGVS * (1+1.54/100) ** design_period)
 AADT_HGVS = round(AADT_HGVS)
 total_projected_aadt_hgvs = round(total_projected_aadt_hgvs)
